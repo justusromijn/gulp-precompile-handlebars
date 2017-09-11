@@ -10,7 +10,7 @@ module.exports = function precompile(obj) {
         file.contents = new Buffer(handlebars.precompile(file.contents.toString('utf8')), settings);
         file.defineModuleOptions = {
             require: {
-                Handlebars: 'handlebars/handlebars.runtime.js'
+                Handlebars: 'handlebars/runtime'
             },
             context: {
                 handlebars: 'Handlebars.template(<%= contents %>)'
