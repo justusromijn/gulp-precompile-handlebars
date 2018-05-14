@@ -22,7 +22,7 @@ var precompileHandlebars = require('gulp-precompile-handlebars');
 
 return gulp.src('src/templates/*.hbs')
   .pipe(precompileHandlebars())
-  .pipe(rename({ extname: '.js' })
+  .pipe(rename({ extname: '.js' }))
   .pipe(defineModule('es6'))
   .pipe(gulp.dest('src/templates'));
 ```
